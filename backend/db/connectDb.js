@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
+require('dotenv').config()
 
-const connectDB = mongoose.connect("mongodb+srv://vishady7:7004850417@cluster0.3or2o2o.mongodb.net/")
+const connectDB = mongoose.connect(process.env.SERVER_URL)
 
 module.exports = connectDB
